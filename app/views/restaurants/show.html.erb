@@ -1,0 +1,12 @@
+<h1 style='margin-top:100px;font-size:2rem'>You picked:
+
+
+   Name: <%= @restaurant.name %>
+  </h1>
+  
+   <p>Address: <%= @restaurant.address  %></p>
+
+    <p>Pizzas We Offer: <% @restaurant.pizzarests.each do |pizzarest| %>
+
+<%= link_to pizzarest.pizza.name, pizza_path(pizza) %>
+<%end%></p>
